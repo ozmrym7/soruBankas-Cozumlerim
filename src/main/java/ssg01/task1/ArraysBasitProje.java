@@ -17,28 +17,23 @@ public class ArraysBasitProje {
         sayısı 0'lar.
         4.elemanlarının toplamını ve çarpımını bulan bir program yazınız.
         5.Bir dizinin en büyük ve en küçük öğelerini bulun ve yazdırın
-
+*/
 
         Scanner input = new Scanner(System.in);
-        System.out.println("lütfen kac adet dizin gireceğinizi belirtiniz...");
-        int arr[]= new int[input.nextInt()]; // kullanıcının girdiği değerleri arry olarak aldım
-        for (int i = 0; i < arr.length-1; i++) {
-          System.out.println(i + ".index için eleman girişi yapınız: ");
-        arr[i]=input.nextInt();
-            System.out.println(i+".index için değer giriniz" );
-        } */
-
-        Scanner input= new Scanner(System.in);
-        System.out.println("lütfen kaç adet sayi girişi yapacağınızı belirtiniz");
-        int arr[]=new int[input.nextInt()]; // kullanıcının girdiği degerler array olarak alındı
-        for (int i =0 ; i < arr.length; i++) {
-            System.out.println(i + ".index için eleman girişi yapınız: ");
-            arr[i]=input.nextInt();
-            System.out.println( Arrays.toString(arr));
+        System.out.println("lütfen kaç adat dizin girişi yapacağınızı belirtin");
+        int arr[] = new int[input.nextInt()]; // kullanıcının girdigi degerler array olarak alındı
+        for (int i = 0; i < arr.length; i++) {// 0 dan başlayıp 1 artırarak bütün girişleri al
+            System.out.println(i + " . index için eleman girişi yapınız..");
+            arr[i] = input.nextInt(); //tek tek aldığın girişleri arr dizinine yerleştir
+            System.out.println(Arrays.toString(arr)); //alınan arrayleri konsola yazdır
         }
+        System.out.println("dizinde olup olmadığını merak ettiğiniz sayıyı giriniz");
+        int sayi = input.nextInt();
+        int aranansayi= Arrays.binarySearch(arr,sayi);
 
 
 
 
-    }
-}
+
+
+    }}
